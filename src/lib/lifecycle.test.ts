@@ -71,6 +71,6 @@ describe("creating and deleting resources", () => {
     const apiVersion = "test.crd/v1alpha1";
     const namespace = "default";
     const deleted = await kubeDelete(apiVersion, kind, name, namespace, logger);
-    expect(deleted.body.status).toEqual("Success");
+    expect(deleted.status).toEqual("Success");
   });
 });
